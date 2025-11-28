@@ -1,8 +1,8 @@
 {
-    "name": "ProjectScope.ProjectName.Demo",
-    "rootNamespace": "ProjectScope.ProjectName.Demo",
+    "name": "1234.5678.abcd.efgh.Demo",
+    "rootNamespace": "1234.5678.abcd.efgh.Demo",
     "references": [
-        "ProjectScope.ProjectName"
+        "1234.5678.abcd.efgh"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

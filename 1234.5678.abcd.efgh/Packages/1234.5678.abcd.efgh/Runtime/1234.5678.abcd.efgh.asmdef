@@ -1,12 +1,8 @@
 {
-    "name": "ProjectScope.ProjectName.Editor",
-    "rootNamespace": "ProjectScope.ProjectName.Editor",
-    "references": [
-        "ProjectScope.ProjectName"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "name": "1234.5678.abcd.efgh",
+    "rootNamespace": "1234.5678.abcd.efgh",
+    "references": [],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

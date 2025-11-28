@@ -1,10 +1,10 @@
 {
-    "name": "ProjectScope.ProjectName.Tests",
-    "rootNamespace": "ProjectScope.ProjectName.Tests",
+    "name": "1234.5678.abcd.efgh.Tests",
+    "rootNamespace": "1234.5678.abcd.efgh.Tests",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "ProjectScope.ProjectName"
+        "1234.5678.abcd.efgh"
     ],
     "includePlatforms": [
         "Editor"
