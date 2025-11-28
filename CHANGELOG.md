@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Unity-UPM-Packages/test/compare/v1.0.1...v1.0.2) (2025-11-28)
+
+
+### Bug Fixes
+
+* update CI ([de22256](https://github.com/Unity-UPM-Packages/test/commit/de222566a6f88116c216dbaecd4cd667030a6bfb))
+
 ## [1.0.1](https://github.com/Unity-UPM-Packages/test/compare/v1.0.0...v1.0.1) (2025-11-28)
 
 
