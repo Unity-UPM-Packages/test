@@ -7,6 +7,10 @@ jobs:
   release:
     name: release
     runs-on: ubuntu-latest
+    outputs:
+      new_release_published: ${{ steps.semantic.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic.outputs.new_release_version }}
+      new_release_notes: ${{ steps.semantic.outputs.new_release_notes }}
     env:
       PACKAGE_PATH: 1234.5678.abcd.efgh/Packages/1234.5678.abcd.efgh
     steps:
@@ -25,26 +29,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
-        if: steps.semantic.outputs.new_release_published == 'true'
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          registry-url: 'https://${{ secrets.VERDACCIO_URL }}'
-          
+  notify:
+    name: Send Telegram Notification
+    runs-on: ubuntu-latest
+    needs: release
+    if: needs.release.outputs.new_release_published == 'true'
+    steps:
       - name: Send Telegram notification
-        if: steps.semantic.outputs.new_release_published == 'true'
         uses: cbrgm/telegram-github-action@v1
         with:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           message: |
-            🚀 **New release: ${{ steps.semantic.outputs.new_release_version }}**
+            🚀 **New release: ${{ needs.release.outputs.new_release_version }}**
             
             **Changes**:
-            ${{ steps.semantic.outputs.new_release_notes }}
+            ${{ needs.release.outputs.new_release_notes }}
           parse-mode: markdown
-        continue-on-error: true
+
 
 
 
