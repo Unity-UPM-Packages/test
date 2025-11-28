@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/Unity-UPM-Packages/test/compare/v1.0.0...v1.0.1) (2025-11-28)
+
+
+### Bug Fixes
+
+* add smt ([d085575](https://github.com/Unity-UPM-Packages/test/commit/d085575d907d9f754f3c5b452bad1723ed6629f3))
+* change CI Action ([080beab](https://github.com/Unity-UPM-Packages/test/commit/080beab7e240d5739d85fb64988095d56f4fccc5))
+
 # 1.0.0 (2025-11-28)
 
 
