@@ -41,12 +41,10 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           message: |
-            🚀 <b>New release: ${{ needs.release.outputs.new_release_version }}</b>
+            🚀 New release: ${{ needs.release.outputs.new_release_version }}
             
-            <b>Changes</b>:
+            Changes:
             ${{ needs.release.outputs.new_release_notes }}
-          parse-mode: html
-          disable-web-page-preview: true
 
 
 
